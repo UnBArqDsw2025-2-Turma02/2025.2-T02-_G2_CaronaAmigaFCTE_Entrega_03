@@ -9,6 +9,9 @@
       - [Facade](/PadroesDeProjeto/Estrutural/facade.md)
       - [Proxy](/PadroesDeProjeto/Estrutural/proxy.md)
     - [3.3. Padrões de Projeto GoFs Comportamentais](/PadroesDeProjeto/3.3.GoFsComportamentais.md)
+      - [Mediator](/PadroesDeProjeto/Comportamental/mediator.md)
+      - [Observer](/PadroesDeProjeto/Comportamental/observer.md)
+      - [Template Method](PadroesDeProjeto/Comportamental/templatemethod.md)
     - [3.4. Participações - Padrões de Projeto](/PadroesDeProjeto/3.4.ParticipacoesPadroes.md)
     - [3.5. Iniciativas Extras - Padrões de Projeto](/PadroesDeProjeto/iniciativasExtras/3.5.IniciativasExtras.md)
       
