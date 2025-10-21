@@ -1,0 +1,49 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam style strictuml
+
+package "factory.produtos" {
+  interface Notificacao {
+    +enviar(): void
+  }
+
+  class NotificacaoSolicitacaoCarona {
+    +enviar(): void
+  }
+
+  class NotificacaoConfirmacaoCarona {
+    +enviar(): void
+  }
+
+  class NotificacaoRejeicaoCarona {
+    +enviar(): void
+  }
+}
+
+package "factory.fabricas" {
+  abstract class NotificacaoFactory {
+    {method} +enviarNotificacao(tipo: String): void
+    {method} #criarNotificacao(tipo: String): Notificacao
+  }
+
+  class GeradorNotificacaoCarona {
+    {method} #criarNotificacao(tipo: String): Notificacao
+  }
+}
+
+package "factory" {
+  class Main {
+    {method} +main(args: String[]): void
+  }
+}
+
+Notificacao <|.. NotificacaoSolicitacaoCarona
+Notificacao <|.. NotificacaoConfirmacaoCarona
+Notificacao <|.. NotificacaoRejeicaoCarona
+
+NotificacaoFactory <|-- GeradorNotificacaoCarona
+
+Main --> NotificacaoFactory : usa
+GeradorNotificacaoCarona ..> Notificacao : cria
+
+@enduml
