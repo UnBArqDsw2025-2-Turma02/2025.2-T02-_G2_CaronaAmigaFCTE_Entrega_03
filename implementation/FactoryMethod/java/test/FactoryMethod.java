@@ -3,8 +3,8 @@ package test;
 import concreteCreator.GeradorDeNotificacaoConcreteCreator;
 import creator.NotificacaoFactoryCreator;
 
-public final class Main {
-    private Main() {
+public final class FactoryMethod {
+    private FactoryMethod() {
         // utility class
     }
 
