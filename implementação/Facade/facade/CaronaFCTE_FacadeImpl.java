@@ -22,23 +22,23 @@ public class CaronaFCTE_FacadeImpl implements FacadeCaronaFCTE {
 
     // Método Facade: Orquestra a operação complexa
     @Override
-    public Carona OferecerNovaCarona(String motoristaId, CaronaDetalhes detalhes) {
+    public Carona oferecerNovaCarona(String motoristaId, CaronaDetalhes detalhes) {
         System.out.println("\n--- [FACADE] Iniciando processo de Oferta de Carona ---");
 
         // 1. Validação e Criação da Carona
-        if (!caronaService.ValidarMotorista(motoristaId)) {
+        if (!caronaService.validarMotorista(motoristaId)) {
             System.out.println("!!! [ERRO] Validação do motorista falhou. Carona não criada.");
             return null;
         }
         
-        Carona novaCarona = caronaService.CriarCarona(motoristaId, detalhes);
+        Carona novaCarona = caronaService.criarCarona(motoristaId, detalhes);
         
         // 2. Criação do Chat (operação de subsistema)
-        Chat novoChat = chatService.CriarNovoChat(novaCarona);
+        Chat novoChat = chatService.criarNovoChat(novaCarona);
 
         // 3. Notificação do Motorista e do Sistema (operação de subsistema)
-        notificacaoService.EnviarNotificacaoSucesso("Motorista", novaCarona);
-        notificacaoService.EnviarAlertaPassageiros(novaCarona);
+        notificacaoService.enviarNotificacaoSucesso("Motorista", novaCarona);
+        notificacaoService.enviarAlertaPassageiros(novaCarona);
 
         System.out.println("--- [FACADE] Carona Publicada. ID do Chat: " + novoChat.id + " ---");
         return novaCarona;

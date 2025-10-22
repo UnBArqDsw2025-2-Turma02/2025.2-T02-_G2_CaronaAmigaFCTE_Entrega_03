@@ -23,7 +23,7 @@ public class Main {
 
         // 4. O Cliente interage APENAS com a Fachada
         System.out.println("Cliente (Motorista): Vou publicar uma carona.");
-        Carona caronaPublicada = facade.OferecerNovaCarona(mauricio.id, detalhes);
+    Carona caronaPublicada = facade.oferecerNovaCarona(mauricio.id, detalhes);
 
         if (caronaPublicada != null) {
             System.out.println("\nCliente (Motorista): Carona criada com sucesso!");

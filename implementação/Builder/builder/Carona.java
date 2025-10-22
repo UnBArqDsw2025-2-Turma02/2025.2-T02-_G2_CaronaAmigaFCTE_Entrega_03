@@ -3,7 +3,6 @@ package builder;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * Produto do padrão Builder.
@@ -13,8 +12,8 @@ import java.util.Objects;
 public final class Carona {
     private final String origem;
     private final String destino;
-    private final String data;     // Mantido como String por simplicidade didática
-    private final String horario;  // idem
+    private final String data; // Mantido como String por simplicidade didática
+    private final String horario; // idem
     private final double preco;
     private final List<String> servicosOpcionais; // Lista defensivamente copiada
 
@@ -23,11 +22,11 @@ public final class Carona {
      * Recebe todos os campos prontos e realiza validações finais.
      */
     Carona(String origem,
-           String destino,
-           String data,
-           String horario,
-           double preco,
-           List<String> servicosOpcionais) {
+            String destino,
+            String data,
+            String horario,
+            double preco,
+            List<String> servicosOpcionais) {
 
         // Validações mínimas de invariantes do domínio
         if (origem == null || origem.isBlank()) {
@@ -65,17 +64,33 @@ public final class Carona {
     }
 
     // Getters somente-leitura
-    public String getOrigem() { return origem; }
-    public String getDestino() { return destino; }
-    public String getData() { return data; }
-    public String getHorario() { return horario; }
-    public double getPreco() { return preco; }
+    public String getOrigem() {
+        return origem;
+    }
+
+    public String getDestino() {
+        return destino;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
 
     /**
      * Retorna uma visão imutável da lista de serviços.
      * Não permite alterar o conteúdo de fora.
      */
-    public List<String> getServicosOpcionais() { return servicosOpcionais; }
+    public List<String> getServicosOpcionais() {
+        return servicosOpcionais;
+    }
 
     /**
      * Representação textual padronizada do objeto.
@@ -87,11 +102,11 @@ public final class Carona {
                 ? "Nenhum"
                 : String.join(", ", servicosOpcionais);
         return "\n--- DETALHES DA CARONA ---\n" +
-               "   Rota: " + origem + " -> " + destino + "\n" +
-               "   Data/Hora: " + data + " às " + horario + "\n" +
-               "   Preço por passageiro: R$ " + String.format("%.2f", preco) + "\n" +
-               "   Serviços Opcionais: " + servicos + "\n" +
-               "--------------------------";
+                "   Rota: " + origem + " -> " + destino + "\n" +
+                "   Data/Hora: " + data + " às " + horario + "\n" +
+                "   Preço por passageiro: R$ " + String.format("%.2f", preco) + "\n" +
+                "   Serviços Opcionais: " + servicos + "\n" +
+                "--------------------------";
     }
 
     public void displayInfo() {

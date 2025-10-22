@@ -1,7 +1,7 @@
 package observer;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Carona {
     private final int idCarona;
@@ -11,7 +11,7 @@ public class Carona {
     // Estado padronizado com enum
     private Status status;
 
-    private final List<CaronaObserver> observers = new ArrayList<>();
+    private final List<CaronaObserver> observers = new CopyOnWriteArrayList<>();
 
     public Carona(int idCarona, String origem, String destino) {
         this.idCarona = idCarona;
