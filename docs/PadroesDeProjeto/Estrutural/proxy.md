@@ -27,6 +27,7 @@ Usos comuns:
 <img src="PadroesDeProjeto\assets\proxy3_primeira_versao.drawio.png" alt="Primeira versão do diagrama Proxy" style="width:75%; border-radius:8px; margin-top:10px;">
 </details>
 
+## Código
 
 
 ## Referências 
