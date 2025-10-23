@@ -23,9 +23,9 @@ Outro exemplo é uma **interface gráfica**, onde elementos visuais são atualiz
 
 ---
 
-## Fonte
+## Referências 
 
-[Refactoring.Guru – Padrão Observer](https://refactoring.guru/design-patterns/observer)
+> [Refactoring.Guru – Padrão Observer](https://refactoring.guru/design-patterns/observer)
 
 ---
 

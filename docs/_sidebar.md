@@ -14,4 +14,6 @@
       - [Template Method](PadroesDeProjeto/Comportamental/templatemethod.md)
     - [3.4. Participações - Padrões de Projeto](/PadroesDeProjeto/3.4.ParticipacoesPadroes.md)
     - [3.5. Iniciativas Extras - Padrões de Projeto](/PadroesDeProjeto/iniciativasExtras/3.5.IniciativasExtras.md)
+      - [Ata de Reunião 20/10](/PadroesDeProjeto/iniciativasExtras/Atas/ata2010.md)
+      - [Ata de Reunião 22/10](/PadroesDeProjeto/iniciativasExtras/Atas/ata2210.md)
       

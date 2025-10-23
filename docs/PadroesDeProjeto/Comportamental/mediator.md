@@ -20,6 +20,31 @@ Em vez de cada usuário enviar mensagens diretamente para todos os outros, eles 
 
 ## Metodologia
 
+**Para o desenvolvimento do Mediator, foram adotadas as seguintes etapas metodológicas:**
+
+1. Foram elaborados um diagrama de casos de uso e um diagrama de classes que serviram como base para estruturar os elementos envolvidos no padrão, suas relações e hierarquias. 
+
+2. Como embasamento teórico, foram consultados os materiais disponibilizados pela professora e o site Refactoring Guru, que auxiliaram na compreensão dos princípios, funcionamento e aplicações do padrão Mediator.
+
+3. O diagrama foi elaborado na ferramenta draw.io, proporcionando uma visualização clara da estrutura dos objetos, de seus relacionamentos e da hierarquia estabelecida conforme os princípios da UML.
+
+---
+
+## Desenvolvimento 
+
+O diagrama representa como o padrão Mediator estrutura a interação entre os tipos de usuários Driver, Passenger e Admin, evitando dependências diretas entre eles. As ações específicas de cada papel são mediadas pelo ConcreteMediator, que coordena a comunicação e simplifica o gerenciamento do sistema. Essa organização favorece a manutenção e a extensibilidade da aplicação.
+
+---
+
+## Código 
+
+### Vídeo 
+
+--- 
+
+## Conclusão 
+A aplicação do padrão Mediator na CaronaAmiga foi fundamental para diminuir o acoplamento entre os componentes da interface. Sua adoção proporcionou uma comunicação centralizada e eficiente, resultando em um sistema mais claro, escalável e de fácil manutenção. Com isso, futuras modificações ou expansões puderam ser realizadas de forma mais simples e segura, contribuindo para a qualidade geral do projeto.
+
 ---
 
 ## Referências
@@ -34,3 +59,5 @@ Em vez de cada usuário enviar mensagens diretamente para todos os outros, eles 
 | Versão | Data       | Descrição                                                                                             | Autor                                          | Revisor |
 | :----: | ---------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------- |
 |  `1.0` | 20/10/2025 | Criação do tópico de Introdução. |  [Maria Eduarda](https://github.com/pyramidsf)  | [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) |
+|  `1.1` | 22/10/2025 | Criação dos tópicos de Metodologia, Desenvolvimento e Conclusão. |  [Maria Eduarda](https://github.com/pyramidsf) [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) | |
+

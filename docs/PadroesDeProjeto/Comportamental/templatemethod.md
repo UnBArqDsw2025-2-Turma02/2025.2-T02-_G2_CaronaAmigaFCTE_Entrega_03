@@ -14,7 +14,7 @@ Entre seus principais benefícios estão a **eliminação de código duplicado**
 
 Alguns usos comuns são:  
 Um cenário típico seria um sistema de mineração de dados que suporta múltiplos formatos (DOC, CSV, PDF) — a estrutura de processamento (abrir arquivo, extrair dados, analisar, gerar relatório) é a mesma, mas cada formato exige implementação específica em certas etapas.
-Outro exemplo é um motor de IA para jogo onde várias “raças” compartilham o mesmo algoritmo de turno (coletar recursos, construir estruturas, atacar), mas cada raça possui variações customizadas nas suas etapas concretas. :contentReference[oaicite:4]{index=4}
+Outro exemplo é um motor de IA para jogo onde várias “raças” compartilham o mesmo algoritmo de turno (coletar recursos, construir estruturas, atacar), mas cada raça possui variações customizadas nas suas etapas concretas. 
 
 ---
 
@@ -22,9 +22,9 @@ Outro exemplo é um motor de IA para jogo onde várias “raças” compartilham
 
 ---
 
-## Fonte
+## Referências
 
-[Refactoring.Guru – Padrão Template Method](https://refactoring.guru/design-patterns/template-method) 
+> [Refactoring.Guru – Padrão Template Method](https://refactoring.guru/design-patterns/template-method) 
 
 ---
 
