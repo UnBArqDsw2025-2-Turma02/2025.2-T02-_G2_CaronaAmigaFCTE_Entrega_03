@@ -69,4 +69,5 @@ A aplicação do padrão Mediator na CaronaAmiga foi fundamental para diminuir o
 | :----: | ---------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------- |
 |  `1.0` | 20/10/2025 | Criação do tópico de Introdução. |  [Maria Eduarda](https://github.com/pyramidsf)  | [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) |
 |  `1.1` | 22/10/2025 | Criação dos tópicos de Metodologia, Desenvolvimento e Conclusão. |  [Maria Eduarda](https://github.com/pyramidsf) [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) | |
+|  `1.2` | 23/10/2025 | Adicionar modelagem e primeira versão. |  [Maria Eduarda](https://github.com/pyramidsf) [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) | |
 
