@@ -23,6 +23,139 @@ Outro exemplo é uma **interface gráfica**, onde elementos visuais são atualiz
 
 ---
 
+## Código
+
+### Vídeo
+
+---
+
+### Observer 
+
+#### AvaliacaoService.java
+```java
+package observer;
+
+public class AvaliacaoService implements CaronaObserver {
+    @Override
+    public void atualizar(Carona carona, Status anterior, Status atual) {
+        if (atual == Status.FINALIZADA) {
+            System.out.println("[AvaliacaoService] Carona " + carona.getIdCarona()
+                    + " finalizada. Acionando módulo de avaliação de motorista e passageiros.");
+        } else {
+            System.out.println("[AvaliacaoService] Carona " + carona.getIdCarona()
+                    + " alterada para " + atual + ". Nenhuma ação de avaliação necessária.");
+        }
+    }
+}
+```
+
+#### Carona.java
+```java
+package observer;
+
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+public class Carona {
+    private final int idCarona;
+    private final String origem;
+    private final String destino;
+
+    // Estado padronizado com enum
+    private Status status;
+
+    private final List<CaronaObserver> observers = new CopyOnWriteArrayList<>();
+
+    public Carona(int idCarona, String origem, String destino) {
+        this.idCarona = idCarona;
+        this.origem = origem;
+        this.destino = destino;
+        this.status = Status.PENDENTE; // estado inicial seguro
+    }
+
+    public void adicionarObserver(CaronaObserver o) {
+        if (o != null && !observers.contains(o)) {
+            observers.add(o);
+        }
+    }
+
+    public void removerObserver(CaronaObserver o) {
+        observers.remove(o);
+    }
+
+    private void notificarObservers(Status anterior, Status atual) {
+        for (CaronaObserver o : observers) {
+            o.atualizar(this, anterior, atual);
+        }
+    }
+
+    public void setStatus(Status novoStatus) {
+        if (novoStatus == null)
+            return;
+        if (this.status == novoStatus)
+            return; // idempotência: evita notificações redundantes
+
+        Status anterior = this.status;
+        this.status = novoStatus;
+        System.out.println(">>> Carona " + idCarona + ": " + anterior + " -> " + novoStatus);
+        notificarObservers(anterior, novoStatus);
+    }
+
+    public int getIdCarona() {
+        return idCarona;
+    }
+
+    public String getOrigem() {
+        return origem;
+    }
+
+    public String getDestino() {
+        return destino;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+}
+```
+
+#### Carona.Observer.java
+```java
+package observer;
+
+public interface CaronaObserver {
+    void atualizar(Carona carona, Status anterior, Status atual);
+}
+```
+
+#### NotificacaoService.java
+```java
+package observer;
+
+public class NotificacaoService implements CaronaObserver {
+    @Override
+    public void atualizar(Carona carona, Status anterior, Status atual) {
+        System.out.println("[NotificacaoService] Carona " + carona.getIdCarona()
+                + " mudou de " + anterior + " para " + atual
+                + " (de " + carona.getOrigem() + " para " + carona.getDestino() + ")");
+    }
+}
+```
+
+#### Status.java
+```java
+package observer;
+
+public enum Status {
+    PENDENTE,
+    CONFIRMADA,
+    FINALIZADA,
+    ATRASADA
+}
+``` 
+
+---
+
 ## Referências 
 
 > [Refactoring.Guru – Padrão Observer](https://refactoring.guru/design-patterns/observer)
@@ -34,3 +167,4 @@ Outro exemplo é uma **interface gráfica**, onde elementos visuais são atualiz
 | Versão | Data       | Descrição                                                                                             | Autor                                          | Revisor |
 | :----: | ---------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------- |
 |  `1.0` | 20/10/2025 | Criação do tópico de Introdução. |  [Maria Eduarda](https://github.com/pyramidsf)  | [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) |
+|  `1.3` | 23/10/2025 | Adicionar código na documentação. |  [Maria Eduarda](https://github.com/pyramidsf) [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) | |
