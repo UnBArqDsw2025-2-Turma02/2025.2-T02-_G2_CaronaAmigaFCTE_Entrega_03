@@ -27,6 +27,83 @@ Um cenário análogo seria a adaptação de tomadas elétricas em uma viagem int
 
 ## Código
 
+### Interface alvo (Target)
+`Pagamento` — interface uniforme que o cliente usa para processar pagamentos.
+
+```java
+// Target
+public interface Pagamento {
+	void setDados(Passageiro passageiro); // recebe os dados do passageiro
+	void pagar(double valor);
+}
+```
+
+### Adaptees (APIs existentes)
+`PagamentoPix` e `PagamentoCartao` representam APIs de pagamento já existentes com interfaces distintas.
+
+```java
+// Adaptees
+class PagamentoPix {
+	public void pagarComPix(String chavePix, double valor) {
+		System.out.println("Pagando R$" + valor + " via Pix: " + chavePix);
+	}
+}
+
+class PagamentoCartao {
+	public void pagarComCartao(String numeroCartao, double valor) {
+		System.out.println("Pagando R$" + valor + " com Cartão: " + numeroCartao);
+	}
+}
+```
+
+### Adapters
+`PixAdapter` e `CartaoAdapter` adaptam as APIs legadas para a interface `Pagamento` usada pelo cliente.
+
+```java
+// Adapter
+class PixAdapter implements Pagamento {
+	private PagamentoPix pix;
+	private Passageiro passageiro;
+
+	public PixAdapter(PagamentoPix pix) {
+		this.pix = pix;
+	}
+
+	@Override
+	public void setDados(Passageiro passageiro) {
+		this.passageiro = passageiro;
+	}
+
+	@Override
+	public void pagar(double valor) {
+		pix.pagarComPix(passageiro.getChavePix(), valor);
+	}
+}
+
+// Adapter
+class CartaoAdapter implements Pagamento {
+	private PagamentoCartao cartao;
+	private Passageiro passageiro;
+
+	public CartaoAdapter(PagamentoCartao cartao) {
+		this.cartao = cartao;
+	}
+
+	@Override
+	public void setDados(Passageiro passageiro) {
+		this.passageiro = passageiro;
+	}
+
+	@Override
+	public void pagar(double valor) {
+		cartao.pagarComCartao(passageiro.getNumeroCartao(), valor);
+	}
+}
+```
+
+## Conclusão
+
+
 ##  Referências 
 
 > Refactoring.Guru - Padrão Adapter: https://refactoring.guru/pt-br/design-patterns/adapter. 
