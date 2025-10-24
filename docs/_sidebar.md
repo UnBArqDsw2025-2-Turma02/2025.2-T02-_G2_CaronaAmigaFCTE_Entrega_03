@@ -5,7 +5,6 @@
 - **Padrões de Projeto**
   - [3. Desenho de Software (Padrões de Projeto)](/PadroesDeProjeto/3.PadroesDeProjeto.md)
     - [3.1. Padrões de Projeto GoFs Criacionais](/PadroesDeProjeto/3.1GoFsCriacionais.md)
-      - [Singleton](/PadroesDeProjeto/Criacional/singleton.md)
     - [3.2. Padrões de Projeto GoFs Estruturais](/PadroesDeProjeto/3.2.GoFsEstruturais.md)
       - [Adapter](/PadroesDeProjeto/Estrutural/adapter.md)
       - [Facade](/PadroesDeProjeto/Estrutural/facade.md)

@@ -1,6 +1,7 @@
 # Adapter
 
-## Definição
+## Introdução
+
 O padrão Adapter (também conhecido como Adaptador ou Wrapper) é um dos padrões estruturais do catálogo de Padrões de Projeto que tem o propósito de permitir que objetos com interfaces incompatíveis colaborem entre si.
 
 O padrão Adapter cria uma classe intermediária que atua como um tradutor entre o código cliente e uma classe de serviço existente que possui uma "interface estranha".
@@ -18,6 +19,14 @@ Seus principais benefícios são:
 - Aderência a Princípios: Ajuda a separar a lógica de conversão de interface ou de dados da lógica primária de negócio (Princípio de responsabilidade única).
 - Flexibilidade (Princípio aberto/fechado): Você pode introduzir novos tipos de adaptadores no programa sem quebrar o código cliente existente, desde que o cliente trabalhe através da interface do cliente.
 - Tradução de Dados: Pode converter dados em vários formatos (como XML para JSON) ou converter unidades (como metros para unidades imperiais).
+
+## Rastreabilidade
+
+O Padrão Adapter está relacionado aos artefatos de Modelagem Estática do projeto, conforme a rastreabilidade abaixo:
+
+| Artefato UML | Padrão | Função no Projeto / Rastreabilidade |
+| :--- | :--- | :--- |
+| **[Diagrama de Classes](https://unbarqdsw2025-2-turma02.github.io/2025.2-T02-_G2_CaronaAmigaFCTE_Entrega_02/#/Modelagem/2.1.ModelagemEstatica)** | Adapter | O padrão Adapter é aplicado na **Interface de Pagamento**. O Diagrama de Classes Unificado mostra a classe `Pagamento`, que é a interface alvo (Target) que os adaptadores (`PixAdapter` e `CartaoAdapter`) implementam para permitir que o cliente use métodos de pagamento incompatíveis. |
 
 ## Modelagem
 
@@ -114,6 +123,11 @@ No projeto, `PixAdapter` e `CartaoAdapter` mostram como encapsular diferentes me
 > Slides da Prof.ª Milene – Aula GoFs Estruturais UnB (2025).
 
 ##  Histórico de Versões
-| Versão | Data       | Descrição                             | Autor                                                 | Revisor                                               |
-| :----: | ---------- | ---------------------------           | ----------------------------------------------------- | ----------------------------------------------------- |
-| `1.0`  | 16/10/2025 | Criação do documento                  |  [Arthur](https://github.com/Tutzs)                   |                                                       | 
+
+| Versão | Data       | Descrição                              | Autor                                                 | Revisor                                               |
+| :----: | ---------- | ---------------------------            | ----------------------------------------------------- | ----------------------------------------------------- |
+| `1.0`  | 16/10/2025 | Criação do documento                   |  [Arthur](https://github.com/Tutzs)                   |                                                       |
+| `1.1`  | 20/10/2025 | Início da documentação sobre o Adapter |  [Amanda](https://github.com/mandicrz)                   |                                                       | 
+| `1.2`  | 22/10/2025 | Adição da modelagem Adapter e reescrita de alguns textos |  [Amanda](https://github.com/mandicrz) |                                                       |  
+| `1.3`  | 23/10/2025 | Adição dos códigos na documentação  |  [Arthur](https://github.com/Tutzs)                   |                                                       | 
+| `1.4`  | 23/10/2025 | Adição da conclusão e revisão final |  [Cauã](https://github.com/caua08)                   			 |                                                       | 

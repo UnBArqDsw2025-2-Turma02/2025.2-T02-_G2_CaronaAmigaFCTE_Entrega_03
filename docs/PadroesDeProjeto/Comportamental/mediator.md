@@ -34,6 +34,10 @@ Em vez de cada usuário enviar mensagens diretamente para todos os outros, eles 
 
 <iframe frameborder="0" style="width:100%;height:600px" src="PadroesDeProjeto\assets\mediator3.drawio.html" allowtransparency="true" dark=0></iframe>
 
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/caio-venancio">Caio Venâncio</a>, <a href="https://github.com/pyramidsf">Maria Eduarda</a>, <a href="https://github.com/CaioMelo25">Caio Melo</a> e <a href="https://github.com/pedro-hsf">Pedro Henrique</a></p>
+
+
+
 <details>
 <summary>Primeira versão do Mediator</summary>
 <img src="PadroesDeProjeto\assets\mediator3_primeira_versao.drawio.png" alt="Primeira versão do diagrama Proxy" style="width:65%; border-radius:8px; margin-top:10px;">
@@ -53,8 +57,6 @@ Para rodar Mediator:
 1. Entre em implementação/Mediator. 
 2. Rode javac .java mediator\.java mediator\model\*.java. 
 3. Rode java Main. 
-
-### Vídeo 
 
 --- 
 

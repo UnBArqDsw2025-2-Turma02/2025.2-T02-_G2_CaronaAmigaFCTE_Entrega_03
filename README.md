@@ -20,7 +20,7 @@ https://www.java.com/pt-BR/download/manual.jsp
 Clone este repositório em sua máquina:
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/UnBArqDsw2025-2-Turma02/2025.2-T02-_G2_CaronaAmigaFCTE_Entrega_03
 ```
 
 ### 2. Acessar o diretório do padrão desejado
@@ -33,10 +33,10 @@ cd ./implementação/<nome-do-padrao>
 
 ### 3. Compilar o projeto
 
-Compile o arquivo `Main.java` junto com os demais diretórios (exceto o `out`):
+Compile todos os arquivos `.java`.
 
 ```bash
-javac -d ./out Main.java ./<outros-diretorios>/*.java
+javac *.java
 ```
 
 ### 4. Executar o projeto
@@ -44,7 +44,7 @@ javac -d ./out Main.java ./<outros-diretorios>/*.java
 Rode a aplicação:
 
 ```bash
-java -cp ./out Main
+java Main
 ```
 
 ---

@@ -38,11 +38,41 @@ CaronaAmigaFCTE tem como objetivo o desenvolvimento de um aplicativo de caronas 
 
 ## Há algo a ser executado?
 
-( ) SIM
+(x) SIM
 
-( ) NÃO
+### Como Executar o Projeto
 
-Se SIM, insira um manual (ou um script) para auxiliar ainda mais os interessados na execução.
+### 1. Clonar o repositório
+
+Clone este repositório em sua máquina:
+
+```bash
+git clone https://github.com/UnBArqDsw2025-2-Turma02/2025.2-T02-_G2_CaronaAmigaFCTE_Entrega_03
+```
+
+### 2. Acessar o diretório do padrão desejado
+
+Navegue até a pasta que contém a implementação do padrão de projeto que deseja executar:
+
+```bash
+cd ./implementação/<nome-do-padrao>
+```
+
+### 3. Compilar o projeto
+
+Compile todos os arquivos `.java`.
+
+```bash
+javac *.java
+```
+
+### 4. Executar o projeto
+
+Rode a aplicação:
+
+```bash
+java Main
+```
 
 ## Histórico de Versões
 

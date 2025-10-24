@@ -21,14 +21,18 @@ Outro exemplo é uma **interface gráfica**, onde elementos visuais são atualiz
 
 ## Metodologia
 
+A aplicação do padrão Observer foi realizada para permitir a comunicação automática e desacoplada entre objetos. Foi modelado o diagrama dos Observers no draw.io, e implementadas as classes em Java para testar notificações automáticas. O padrão facilitou a manutenção e a expansão do sistema, permitindo adicionar novos observadores sem alterar o núcleo do código.
+
+---
+
+## Modelagem
+
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/333c5f74-69f6-46af-91c1-6553a98fccf9" id="fpp2A.M_aM5B"></iframe></div>
+
+
 ---
 
 ## Código
-
-### Vídeo
-
----
-
 ### Observer 
 
 #### AvaliacaoService.java
@@ -156,6 +160,12 @@ public enum Status {
 
 ---
 
+## Conclusão 
+
+O padrão Observer foi implementado de forma eficaz, permitindo uma comunicação reativa e desacoplada entre os objetos do sistema. Sua aplicação possibilitou que múltiplos componentes fossem notificados automaticamente sempre que o estado de um objeto principal fosse alterado, eliminando dependências diretas e aumentando a flexibilidade da arquitetura. Com isso, o sistema passou a apresentar maior coesão e extensibilidade, uma vez que novos observadores podem ser adicionados ou removidos sem necessidade de alterações nas demais classes. Essa característica reforça o princípio de baixo acoplamento, essencial em sistemas orientados a eventos.
+
+--- 
+
 ## Referências 
 
 > [Refactoring.Guru – Padrão Observer](https://refactoring.guru/design-patterns/observer)
@@ -168,3 +178,5 @@ public enum Status {
 | :----: | ---------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------- |
 |  `1.0` | 20/10/2025 | Criação do tópico de Introdução. |  [Maria Eduarda](https://github.com/pyramidsf)  | [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) |
 |  `1.1` | 23/10/2025 | Adicionar código na documentação. |  [Maria Eduarda](https://github.com/pyramidsf) [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) | |
+|  `1.2` | 23/10/2025 | Adicionar metodologia e concluão. |  [Maria Eduarda](https://github.com/pyramidsf) [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) | |
+|  `1.3` | 23/10/2025 | Adicionar modelagem. |  [Maria Eduarda](https://github.com/pyramidsf) [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) | |
