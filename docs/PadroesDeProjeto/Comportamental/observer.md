@@ -27,6 +27,7 @@ A aplicação do padrão Observer foi realizada para permitir a comunicação au
 
 ## Modelagem
 
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/333c5f74-69f6-46af-91c1-6553a98fccf9" id="fpp2A.M_aM5B"></iframe></div>
 
 
 ---
@@ -178,3 +179,4 @@ O padrão Observer foi implementado de forma eficaz, permitindo uma comunicaçã
 |  `1.0` | 20/10/2025 | Criação do tópico de Introdução. |  [Maria Eduarda](https://github.com/pyramidsf)  | [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) |
 |  `1.1` | 23/10/2025 | Adicionar código na documentação. |  [Maria Eduarda](https://github.com/pyramidsf) [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) | |
 |  `1.2` | 23/10/2025 | Adicionar metodologia e concluão. |  [Maria Eduarda](https://github.com/pyramidsf) [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) | |
+|  `1.3` | 23/10/2025 | Adicionar modelagem. |  [Maria Eduarda](https://github.com/pyramidsf) [Caio Venâncio](https://github.com/caio-venancio), [Pedro Henrique](https://github.com/pedro-hsf), [Caio Melo](https://github.com/CaioMelo25) | |
