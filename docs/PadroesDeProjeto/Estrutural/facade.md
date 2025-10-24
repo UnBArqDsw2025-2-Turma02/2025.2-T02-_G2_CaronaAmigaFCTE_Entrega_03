@@ -231,12 +231,6 @@ public class NotificacaoService {
 
 <p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/mandicrz"> Amanda Cruz</a>, <a href="https://github.com/tutzs"> Arthur Sousa</a>, <a href="https://github.com/caua08"> Cauã Araujo</a></p>
 
-
-### Vídeo
-
-<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/tutzs"> Arthur Sousa</a>
-
-
 ## Conclusão
 
 O padrão Facade simplifica a interação com subsistemas complexos ao expor uma API de alto nível, reduzindo o acoplamento e facilitando o uso por clientes. Sua aplicação melhora a legibilidade e a manutenção do código ao centralizar o fluxo composto por várias classes (validação, criação de entidades, notificações, etc.). Evite, entretanto, concentrar responsabilidades demais na fachada — considere delegar lógica de negócio para serviços especializados e mantenha a fachada como orquestradora.
