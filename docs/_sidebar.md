@@ -1,5 +1,3 @@
-<!-- docs/_sidebar.md -->
-
 - [Home](/)
 
 - **Padrões de Projeto**
@@ -20,4 +18,3 @@
       - [Ata de Reunião G3 20/10](/PadroesDeProjeto/iniciativasExtras/Atas/ata2010.md)
       - [Ata de Reunião G2 22/10](/PadroesDeProjeto/iniciativasExtras/Atas/atag222.md)
       - [Ata de Reunião G3 22/10](/PadroesDeProjeto/iniciativasExtras/Atas/ata2210.md)
-      
