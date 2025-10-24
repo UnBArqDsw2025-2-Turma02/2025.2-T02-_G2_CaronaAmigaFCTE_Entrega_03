@@ -1,7 +1,9 @@
 ### Ata de Reunião – 22/10/2025
 
 **Data:** 22/10/2025
+
 **Horário:** 17:00 às 21:00
+
 **Local:** Reunião Online - Discord
 
 **Presentes**
@@ -24,4 +26,4 @@ A documentação está atualmente sendo finalizada, não foi possível concluir 
 
 | Versão | Data       | Descrição                                                                                             | Autor                                          | Revisor |
 | :----: | ---------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------- |
-|  `1.0` | 28/10/2025 | Criação da ata de reunião do dia 22/10/2025. | [Cauã Araujo](https://github.com/caua08) |  [Amanda Cruz](https://github.com/mandicrz)
+|  `1.0` | 23/10/2025 | Criação da ata de reunião do dia 22/10/2025. | [Cauã Araujo](https://github.com/caua08) |  [Amanda Cruz](https://github.com/mandicrz)

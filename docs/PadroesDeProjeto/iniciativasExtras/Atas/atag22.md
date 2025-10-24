@@ -1,7 +1,9 @@
 ### Ata de Reunião – 20/10/2025
 
 **Data:** 20/10/2025
+
 **Horário:** 19:00 às 21:30
+
 **Local:** Reunião Online - Discord
 
 **Presentes**
@@ -21,4 +23,4 @@ Os códigos foram escritos por cada membro do grupo
 
 | Versão | Data       | Descrição                                                                                             | Autor                                          | Revisor |
 | :----: | ---------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------- |
-|  `1.0` | 28/10/2025 | Criação da ata de reunião do dia 22/10/2025. | [Cauã Araujo](https://github.com/caua08) |  [Arthur Sousa](https://github.com/Tutzs)
+|  `1.0` | 21/10/2025 | Criação da ata de reunião do dia 22/10/2025. | [Cauã Araujo](https://github.com/caua08) |  [Arthur Sousa](https://github.com/Tutzs)
