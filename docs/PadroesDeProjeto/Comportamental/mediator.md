@@ -34,7 +34,7 @@ Em vez de cada usuário enviar mensagens diretamente para todos os outros, eles 
 
 <iframe frameborder="0" style="width:100%;height:600px" src="PadroesDeProjeto\assets\mediator3.drawio.html" allowtransparency="true" dark=0></iframe>
 
-<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/caio-venancio">Caio Venâncio</a>, <a href="https://github.com/pyramidsf">Maria Eduarda</a>, <a href="ttps://github.com/CaioMelo25">Caio Melo</a> e <a href="https://github.com/pedro-hsf">Pedro Henrique</a></p>
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/caio-venancio">Caio Venâncio</a>, <a href="https://github.com/pyramidsf">Maria Eduarda</a>, <a href="https://github.com/CaioMelo25">Caio Melo</a> e <a href="https://github.com/pedro-hsf">Pedro Henrique</a></p>
 
 
 
