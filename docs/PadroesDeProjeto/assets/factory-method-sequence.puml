@@ -1,0 +1,17 @@
+@startuml
+skinparam style strictuml
+actor "Aplicacao" as App
+participant "Main" as Main
+participant "GeradorNotificacaoCarona" as Factory
+participant "Notificacao" as Produto
+
+App -> Main : main()
+Main -> Factory : enviarNotificacao("TIPO")
+activate Factory
+Factory -> Factory : criarNotificacao("TIPO")
+Factory --> Produto : instancia concreta
+Factory -> Produto : enviar()
+Produto --> Factory :
+Factory --> Main :
+Main --> App :
+@enduml
