@@ -17,20 +17,15 @@ Alguns usos comuns são:
 Um cenário típico seria um **sistema de notícias**, no qual diversos assinantes (observadores) recebem automaticamente novas atualizações quando uma notícia é publicada.  
 Outro exemplo é uma **interface gráfica**, onde elementos visuais são atualizados automaticamente quando os dados do modelo sofrem alterações.
 
----
-
 ## Metodologia
 
 A aplicação do padrão Observer foi realizada para permitir a comunicação automática e desacoplada entre objetos. Foi modelado o diagrama dos Observers no draw.io, e implementadas as classes em Java para testar notificações automáticas. O padrão facilitou a manutenção e a expansão do sistema, permitindo adicionar novos observadores sem alterar o núcleo do código.
-
----
 
 ## Modelagem
 
 <div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/333c5f74-69f6-46af-91c1-6553a98fccf9" id="fpp2A.M_aM5B"></iframe></div>
 
-
----
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/mandicrz"> Amanda Cruz</a>, <a href="https://github.com/tutzs"> Arthur Sousa</a>, <a href="https://github.com/caua08"> Cauã Araujo</a></p>
 
 ## Código
 ### Observer 
@@ -157,20 +152,15 @@ public enum Status {
     ATRASADA
 }
 ``` 
-
----
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/mandicrz"> Amanda Cruz</a>, <a href="https://github.com/tutzs"> Arthur Sousa</a>, <a href="https://github.com/caua08"> Cauã Araujo</a></p>
 
 ## Conclusão 
 
 O padrão Observer foi implementado de forma eficaz, permitindo uma comunicação reativa e desacoplada entre os objetos do sistema. Sua aplicação possibilitou que múltiplos componentes fossem notificados automaticamente sempre que o estado de um objeto principal fosse alterado, eliminando dependências diretas e aumentando a flexibilidade da arquitetura. Com isso, o sistema passou a apresentar maior coesão e extensibilidade, uma vez que novos observadores podem ser adicionados ou removidos sem necessidade de alterações nas demais classes. Essa característica reforça o princípio de baixo acoplamento, essencial em sistemas orientados a eventos.
 
---- 
-
 ## Referências 
 
 > [Refactoring.Guru – Padrão Observer](https://refactoring.guru/design-patterns/observer)
-
----
 
 ## Histórico de Versões
 

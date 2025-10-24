@@ -1,34 +1,53 @@
-# RepositorioTemplate
+# CaronaAmigaFCTE
 
-Repositório que deve ser utilizado como template inicial pelos grupos da matéria de Arquitetura e Desenho de Software.
+## Tecnologias Utilizadas
 
-## Introdução
+Este projeto utiliza as seguintes tecnologias:
 
-Este repositório traz um template de repo de documentação a ser seguido pelos grupos de arquitetura e desenho de software.
+- **[Docsify](https://docsify.js.org/):** Responsável por gerar a documentação como um site estático.
+- **Java 21:** Utilizado para implementar os padrões de projeto.
 
-## Tecnologia
+Você pode baixar o Java 21 no link abaixo:
 
-A geração do site estático é realizada utilizando o [docsify](https://docsify.js.org/).
-
-```shell
-"Docsify generates your documentation website on the fly. Unlike GitBook, it does not generate static html files. Instead, it smartly loads and parses your Markdown files and displays them as a website. To start using it, all you need to do is create an index.html and deploy it on GitHub Pages."
+```
+https://www.java.com/pt-BR/download/manual.jsp
 ```
 
-### Instalando o docsify
+## Como Executar o Projeto
 
-Execute o comando:
+### 1. Clonar o repositório
 
-```shell
-npm i docsify-cli -g
+Clone este repositório em sua máquina:
+
+```bash
+git clone https://github.com/UnBArqDsw2025-2-Turma02/2025.2-T02-_G2_CaronaAmigaFCTE_Entrega_03
 ```
 
-### Executando localmente
+### 2. Acessar o diretório do padrão desejado
 
-Para iniciar o site localmente, utilize o comando:
+Navegue até a pasta que contém a implementação do padrão de projeto que deseja executar:
 
-```shell
-docsify serve ./docs
+```bash
+cd ./implementação/<nome-do-padrao>
 ```
+
+### 3. Compilar o projeto
+
+Compile todos os arquivos `.java`.
+
+```bash
+javac *.java
+```
+
+### 4. Executar o projeto
+
+Rode a aplicação:
+
+```bash
+java Main
+```
+
+---
 
 ## Contribuidores
 

@@ -16,12 +16,8 @@ Alguns usos comuns são:
 Um cenário típico seria um sistema de mineração de dados que suporta múltiplos formatos (DOC, CSV, PDF) — a estrutura de processamento (abrir arquivo, extrair dados, analisar, gerar relatório) é a mesma, mas cada formato exige implementação específica em certas etapas.
 Outro exemplo é um motor de IA para jogo onde várias “raças” compartilham o mesmo algoritmo de turno (coletar recursos, construir estruturas, atacar), mas cada raça possui variações customizadas nas suas etapas concretas. 
 
----
-
 ## Metodologia
 O padrão Template Method foi aplicado para definir a estrutura geral de um algoritmo, permitindo que subclasses implementassem apenas etapas específicas conforme suas necessidades. Essa abordagem garantiu reutilização de código, padronização de processos e maior controle sobre a sequência de execução das operações. Com a centralização do fluxo principal na superclasse, o sistema se tornou mais organizado e consistente, facilitando futuras manutenções e evitando duplicação de lógica.
-
----
 
 ## Modelagem
 
@@ -30,9 +26,6 @@ O padrão Template Method foi aplicado para definir a estrutura geral de um algo
 </p>
 
 <p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/kalebmacedo">Kaleb Macedo</a>, <a href="https://github.com/LucasMF1">Lucas Monteiro Freitas</a> e <a href="https://github.com/bolzanMGB">Othavio Bolzan</a></p>
-
-
----
 
 ## Código 
 
@@ -125,20 +118,16 @@ public class Main {
 }
 ```
 
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/kalebmacedo"> Kaleb Macedo</a>, <a href="https://github.com/LucasMF1"> Lucas Monteiro</a>, <a href="https://github.com/bolzanMGB"> Othavio Bolzan</a></p>
 
----
 
 ## Conclusão 
 
 O padrão Template Method foi aplicado para definir a estrutura geral de um algoritmo, permitindo que subclasses implementassem apenas etapas específicas conforme suas necessidades. Essa abordagem garantiu reutilização de código, padronização de processos e maior controle sobre a sequência de execução das operações. Com a centralização do fluxo principal na superclasse, o sistema se tornou mais organizado e consistente, facilitando futuras manutenções e evitando duplicação de lógica.
 
----
-
 ## Referências
 
 > [Refactoring.Guru – Padrão Template Method](https://refactoring.guru/design-patterns/template-method) 
-
----
 
 | Versão | Data       | Descrição                                                                                             | Autor                                          | Revisor |
 | :----: | ---------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------- |

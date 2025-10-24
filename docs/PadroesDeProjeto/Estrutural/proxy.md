@@ -15,16 +15,27 @@ Usos comuns:
 - Caching Proxy: armazena resultados de operações dispendiosas para reutilização;
 - Remote Proxy: oferece uma representação local de objetos que residem em outro processo ou máquina.
 
-## Metodologia
+## Rastreabilidade
 
+O Padrão Proxy está relacionado aos artefatos de Modelagem Estática do projeto, conforme a rastreabilidade abaixo:
+
+| Artefato UML | Padrão | Função no Projeto / Rastreabilidade |
+| :--- | :--- | :--- |
+| **[Diagrama de Componentes](https://unbarqdsw2025-2-turma02.github.io/2025.2-T02-_G2_CaronaAmigaFCTE_Entrega_02/#/Modelagem/2.1.ModelagemEstatica)** | Proxy | O Proxy é aplicado ao **Location Service** para caching e controle de acesso (rate limiting). O Diagrama de Componentes Unificado apresenta um componente de **Location Service Interface**, que o `ProxyLocation` implementaria para mediar o acesso ao serviço real (`GoogleGeoService`). |
+| **[Diagrama de Classes](https://unbarqdsw2025-2-turma02.github.io/2025.2-T02-_G2_CaronaAmigaFCTE_Entrega_02/#/Modelagem/2.1.ModelagemEstatica)** | Proxy | O diagrama conceitual do padrão, incluído na documentação do Proxy, é um **Diagrama de Classes** que ilustra o `LocationService` (Interface), o `GoogleGeoService` (Real Subject) e o `ProxyLocation` (Proxy). |
 
 ## Modelagem
 
 <iframe frameborder="0" style="width:100%;height:600px" src="PadroesDeProjeto\assets\proxy3.drawio.html" allowtransparency="true" dark=0></iframe>
 
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/CaioMelo25"> Caio Melo</a>, <a href="https://github.com/caio-venancio"> Caio Venâncio</a>, <a href="https://github.com/pyramidsf"> Maria Eduarda</a>, <a href="https://github.com/pedro-hsf"> Pedro Henrique</a></p>
+
 <details>
 <summary>Primeira versão do Proxy</summary>
 <img src="PadroesDeProjeto\assets\proxy3_primeira_versao.drawio.png" alt="Primeira versão do diagrama Proxy" style="width:75%; border-radius:8px; margin-top:10px;">
+
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/CaioMelo25"> Caio Melo</a>, <a href="https://github.com/caio-venancio"> Caio Venâncio</a>, <a href="https://github.com/pyramidsf"> Maria Eduarda</a>, <a href="https://github.com/pedro-hsf"> Pedro Henrique</a></p>
+
 </details>
 
 ## Código
@@ -185,7 +196,14 @@ public class ProxyLocation implements LocationService {
 }
 ```
 
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/CaioMelo25"> Caio Melo</a>, <a href="https://github.com/caio-venancio"> Caio Venâncio</a>, <a href="https://github.com/pyramidsf"> Maria Eduarda</a>, <a href="https://github.com/pedro-hsf"> Pedro Henrique</a></p>
+
+
 ## Conclusão
+
+O Proxy permite controlar e mediar o acesso a um objeto real sem alterar sua implementação, sendo muito útil para adicionar caching, controle de acesso, logging ou inicialização tardia (lazy loading). Em muitos cenários traz ganhos claros de segurança e desempenho (por exemplo, cache ou rate limiting), mas também introduz uma camada adicional de complexidade e overhead que deve ser justificado. Use Proxy quando precisar inserir políticas transversais ou otimizações sem modificar o RealSubject.
+
+No exemplo do projeto, `ProxyLocation` ilustra um proxy com caching e rate limiting para uma API de geolocalização, combinando proteção e otimização de chamadas.
 
 ## Referências 
 
@@ -194,6 +212,11 @@ public class ProxyLocation implements LocationService {
 > SOURCEMAKING. Proxy. [S. l.], [s. d.]. Disponível em: https://sourcemaking.com/design_patterns/proxy. 
 
 ##  Histórico de Versões
-| Versão | Data       | Descrição                             | Autor                                                 | Revisor                                               |
-| :----: | ---------- | ---------------------------           | ----------------------------------------------------- | ----------------------------------------------------- |
-| `1.0`  | 16/10/2025 | Criação do documento                  |  [Arthur](https://github.com/Tutzs)                   |                                                       | 
+
+| Versão | Data       | Descrição                              | Autor                                                 | Revisor                                               |
+| :----: | ---------- | ---------------------------            | ----------------------------------------------------- | ----------------------------------------------------- |
+| `1.0`  | 16/10/2025 | Criação do documento                   |  [Arthur](https://github.com/Tutzs)                   |                                                       |
+| `1.1`  | 20/10/2025 | Documentação do Proxy |  [Arthur](https://github.com/Tutzs)         |                                                       | 
+| `1.2`  | 21/10/2025 | Adição do código  |  [Amanda](https://github.com/mandicrz) |                                                       |  
+| `1.3`  | 23/10/2025 | Adição da modelagem e conclusão  |  [Cauã](https://github.com/caua08) |                                                       | 
+| `1.4`  | 23/10/2025 | Revisão final | [Arthur](https://github.com/Tutzs) |                                                       | 

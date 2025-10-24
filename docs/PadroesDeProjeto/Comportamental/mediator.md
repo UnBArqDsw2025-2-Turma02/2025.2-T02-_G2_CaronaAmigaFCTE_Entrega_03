@@ -16,7 +16,6 @@ Alguns usos comuns são:
 Um cenário típico seria um **sistema de chat**, no qual o mediador gerencia a comunicação entre os usuários.  
 Em vez de cada usuário enviar mensagens diretamente para todos os outros, eles se comunicam através do mediador, que **coordena e direciona** as mensagens de forma centralizada.
 
----
 
 ## Metodologia
 
@@ -41,15 +40,14 @@ Em vez de cada usuário enviar mensagens diretamente para todos os outros, eles 
 <details>
 <summary>Primeira versão do Mediator</summary>
 <img src="PadroesDeProjeto\assets\mediator3_primeira_versao.drawio.png" alt="Primeira versão do diagrama Proxy" style="width:65%; border-radius:8px; margin-top:10px;">
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/caio-venancio">Caio Venâncio</a>, <a href="https://github.com/pyramidsf">Maria Eduarda</a>, <a href="https://github.com/CaioMelo25">Caio Melo</a> e <a href="https://github.com/pedro-hsf">Pedro Henrique</a></p>
 </details>
 
----
 
 ## Desenvolvimento 
 
 O diagrama representa como o padrão Mediator estrutura a interação entre os tipos de usuários Driver, Passenger e Admin, evitando dependências diretas entre eles. As ações específicas de cada papel são mediadas pelo ConcreteMediator, que coordena a comunicação e simplifica o gerenciamento do sistema. Essa organização favorece a manutenção e a extensibilidade da aplicação.
 
----
 
 ## Código 
 
@@ -57,8 +55,7 @@ Para rodar Mediator:
 1. Entre em implementação/Mediator. 
 2. Rode javac .java mediator\.java mediator\model\*.java. 
 3. Rode java Main. 
-
---- 
+ 
 
 
 ### Mediator
@@ -294,21 +291,19 @@ public class Passenger extends Component {
 }
 ```
 
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/caio-venancio">Caio Venâncio</a>, <a href="https://github.com/pyramidsf">Maria Eduarda</a>, <a href="https://github.com/CaioMelo25">Caio Melo</a> e <a href="https://github.com/pedro-hsf">Pedro Henrique</a></p>
 
 
 ## Conclusão 
 A aplicação do padrão Mediator na CaronaAmiga foi fundamental para diminuir o acoplamento entre os componentes da interface. Sua adoção proporcionou uma comunicação centralizada e eficiente, resultando em um sistema mais claro, escalável e de fácil manutenção. Com isso, futuras modificações ou expansões podem ser realizadas de forma mais simples e segura, contribuindo para a qualidade geral do projeto.
 
----
 
 ## Referências
 
 > [Refactoring.Guru – Padrão Mediator](https://refactoring.guru/design-patterns/mediator)
 
----
 
 ## Histórico de Versões
-
 
 | Versão | Data       | Descrição                                                                                             | Autor                                          | Revisor |
 | :----: | ---------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------- |

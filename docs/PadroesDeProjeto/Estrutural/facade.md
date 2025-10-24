@@ -1,6 +1,6 @@
 # Facade 
 
-## Definição
+## Introdução
 
 O padrão Facade é um dos padrões estruturais do catálogo GoF que cria uma interface de nível mais alto para um subsistema complexo, tornando-o mais fácil de usar pela camada cliente.
 
@@ -18,11 +18,20 @@ Esse padrão é especialmente útil quando o sistema possui diversos módulos qu
 
 Um cenário típico seria uma plataforma educacional em que a fachada encapsula a lógica de iniciar um módulo, registrar respostas e atualizar o progresso do aluno em uma única chamada.
 
-## Metodologia
+## Rastreabilidade
+
+O Padrão Facade está relacionado aos artefatos de Modelagem Estática e Organizacional do projeto, conforme a rastreabilidade abaixo:
+
+| Artefato UML | Padrão | Função no Projeto / Rastreabilidade |
+| :--- | :--- | :--- |
+| **[Diagrama de Pacotes](https://unbarqdsw2025-2-turma02.github.io/2025.2-T02-_G2_CaronaAmigaFCTE_Entrega_02/#/Modelagem/2.3.ModelagemOrganizacionalCasosDeUso?id=_234-diagrama-de-pacotes)** | Facade | O Diagrama de Pacotes Unificado representa uma camada chamada **"FachadaAplicacao"** dentro da **"Business Layer"**, que é o agrupador lógico para a implementação da Fachada (`CaronaFCTE_FacadeImpl`). O padrão orquestra serviços como `CaronaService` e `NotificacaoService`. |
+| **[Diagrama de Componentes](https://unbarqdsw2025-2-turma02.github.io/2025.2-T02-_G2_CaronaAmigaFCTE_Entrega_02/#/Modelagem/2.1.ModelagemEstatica)** | Facade | O componente **API Gateway** no Diagrama de Componentes atua como um *Facade* de sistema para os aplicativos móveis, simplificando o acesso às funcionalidades do backend (Autenticação, Gerenciamento de Caronas, etc.). |
 
 ## Modelagem
 
-<div style="width: 100%; height: 600px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/b1670c4a-bc86-47a6-8fd0-64f53f09ba71" id="gck2YP.hdzHg"></iframe></div>
+<div style="width: 100%; height: 600px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:100%; height:600px" src="https://lucid.app/documents/embedded/b1670c4a-bc86-47a6-8fd0-64f53f09ba71" id="gck2YP.hdzHg"></iframe></div>
+
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/mandicrz"> Amanda Cruz</a>, <a href="https://github.com/tutzs"> Arthur Sousa</a>, <a href="https://github.com/caua08"> Cauã Araujo</a></p>
 
 ## Código
 
@@ -220,10 +229,19 @@ public class NotificacaoService {
 }
 ```
 
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/mandicrz"> Amanda Cruz</a>, <a href="https://github.com/tutzs"> Arthur Sousa</a>, <a href="https://github.com/caua08"> Cauã Araujo</a></p>
+
+
 ### Vídeo
+
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/tutzs"> Arthur Sousa</a>
+
 
 ## Conclusão
 
+O padrão Facade simplifica a interação com subsistemas complexos ao expor uma API de alto nível, reduzindo o acoplamento e facilitando o uso por clientes. Sua aplicação melhora a legibilidade e a manutenção do código ao centralizar o fluxo composto por várias classes (validação, criação de entidades, notificações, etc.). Evite, entretanto, concentrar responsabilidades demais na fachada — considere delegar lógica de negócio para serviços especializados e mantenha a fachada como orquestradora.
+
+No repositório, `CaronaFCTE_FacadeImpl` demonstra como agregar validação, criação de chat e notificações em uma operação única, tornando o uso do subsistema mais direto para o cliente.
 
 ##  Referências 
 
@@ -234,6 +252,10 @@ public class NotificacaoService {
 > Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1994). *Design Patterns: Elements of Reusable Object-Oriented Software*. Addison-Wesley.
 
 ##  Histórico de Versões
-| Versão | Data       | Descrição                             | Autor                                                 | Revisor                                               |
-| :----: | ---------- | ---------------------------           | ----------------------------------------------------- | ----------------------------------------------------- |
-| `1.0`  | 16/10/2025 | Criação do documento                  |  [Arthur](https://github.com/Tutzs)                   |                                                       | 
+
+| Versão | Data       | Descrição                              | Autor                                                 | Revisor                                               |
+| :----: | ---------- | ---------------------------            | ----------------------------------------------------- | ----------------------------------------------------- |
+| `1.0`  | 16/10/2025 | Criação do documento                   |  [Arthur](https://github.com/Tutzs)   |                                                       |
+| `1.1`  | 19/10/2025 | Começo da escrita da documentação |  [Arthur](https://github.com/Tutzs)        |                                                       | 
+| `1.2`  | 21/10/2025 | Adição da modelagem e conclusão |  [Amanda](https://github.com/mandicrz) 				|                                                       |  
+| `1.3`  | 22/10/2025 | Adição do código e revisão final  |  [Cauã](https://github.com/caua08)        |                                                       | 
