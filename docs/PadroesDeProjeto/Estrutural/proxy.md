@@ -15,16 +15,18 @@ Usos comuns:
 - Caching Proxy: armazena resultados de operações dispendiosas para reutilização;
 - Remote Proxy: oferece uma representação local de objetos que residem em outro processo ou máquina.
 
-## Metodologia
-
-
 ## Modelagem
 
 <iframe frameborder="0" style="width:100%;height:600px" src="PadroesDeProjeto\assets\proxy3.drawio.html" allowtransparency="true" dark=0></iframe>
 
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/CaioMelo25"> Caio Melo</a>, <a href="https://github.com/caio-venancio"> Caio Venâncio</a>, <a href="https://github.com/pyramidsf"> Maria Eduarda</a>, <a href="https://github.com/pedro-hsf"> Pedro Henrique</a></p>
+
 <details>
 <summary>Primeira versão do Proxy</summary>
 <img src="PadroesDeProjeto\assets\proxy3_primeira_versao.drawio.png" alt="Primeira versão do diagrama Proxy" style="width:75%; border-radius:8px; margin-top:10px;">
+
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/CaioMelo25"> Caio Melo</a>, <a href="https://github.com/caio-venancio"> Caio Venâncio</a>, <a href="https://github.com/pyramidsf"> Maria Eduarda</a>, <a href="https://github.com/pedro-hsf"> Pedro Henrique</a></p>
+
 </details>
 
 ## Código
@@ -185,7 +187,14 @@ public class ProxyLocation implements LocationService {
 }
 ```
 
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/CaioMelo25"> Caio Melo</a>, <a href="https://github.com/caio-venancio"> Caio Venâncio</a>, <a href="https://github.com/pyramidsf"> Maria Eduarda</a>, <a href="https://github.com/pedro-hsf"> Pedro Henrique</a></p>
+
+
 ## Conclusão
+
+O Proxy permite controlar e mediar o acesso a um objeto real sem alterar sua implementação, sendo muito útil para adicionar caching, controle de acesso, logging ou inicialização tardia (lazy loading). Em muitos cenários traz ganhos claros de segurança e desempenho (por exemplo, cache ou rate limiting), mas também introduz uma camada adicional de complexidade e overhead que deve ser justificado. Use Proxy quando precisar inserir políticas transversais ou otimizações sem modificar o RealSubject.
+
+No exemplo do projeto, `ProxyLocation` ilustra um proxy com caching e rate limiting para uma API de geolocalização, combinando proteção e otimização de chamadas.
 
 ## Referências 
 

@@ -19,16 +19,15 @@ Seus principais benefícios são:
 - Flexibilidade (Princípio aberto/fechado): Você pode introduzir novos tipos de adaptadores no programa sem quebrar o código cliente existente, desde que o cliente trabalhe através da interface do cliente.
 - Tradução de Dados: Pode converter dados em vários formatos (como XML para JSON) ou converter unidades (como metros para unidades imperiais).
 
-Um cenário análogo seria a adaptação de tomadas elétricas em uma viagem internacional. Se o seu plugue brasileiro não cabe na tomada europeia, você usa um adaptador de tomada que converte o estilo do plugue para o estilo que a tomada espera. Em termos de programação, um cenário típico é uma aplicação de monitoramento do mercado de ações que baixa dados em XML, mas precisa usar um adaptador XML-para-JSON para que uma biblioteca de análise de terceiros possa processar esses dados. O adaptador recebe a chamada do cliente, traduz os dados XML para JSON, e então passa a chamada para os métodos apropriados do objeto de análise encoberto.
-
-## Metodologia
-
 ## Modelagem
+
+<div style="width: 100%; height: 600px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:100%; height:600px" src="https://lucid.app/documents/embedded/887e2308-dd02-40e3-a0e7-73316f2226d8" id="Rwn2DSu_3.28"></iframe></div>
+
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/kalebmacedo"> Kaleb Macedo</a>, <a href="https://github.com/LucasMF1"> Lucas Monteiro</a>, <a href="https://github.com/bolzanMGB"> Othavio Bolzan</a></p>
 
 ## Código
 
 ### Interface alvo (Target)
-`Pagamento` — interface uniforme que o cliente usa para processar pagamentos.
 
 ```java
 // Target
@@ -39,7 +38,6 @@ public interface Pagamento {
 ```
 
 ### Adaptees (APIs existentes)
-`PagamentoPix` e `PagamentoCartao` representam APIs de pagamento já existentes com interfaces distintas.
 
 ```java
 // Adaptees
@@ -57,7 +55,6 @@ class PagamentoCartao {
 ```
 
 ### Adapters
-`PixAdapter` e `CartaoAdapter` adaptam as APIs legadas para a interface `Pagamento` usada pelo cliente.
 
 ```java
 // Adapter
@@ -101,8 +98,14 @@ class CartaoAdapter implements Pagamento {
 }
 ```
 
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/kalebmacedo"> Kaleb Macedo</a>, <a href="https://github.com/LucasMF1"> Lucas Monteiro</a>, <a href="https://github.com/bolzanMGB"> Othavio Bolzan</a></p>
+
+
 ## Conclusão
 
+O Adapter é uma solução prática para integrar APIs incompatíveis sem a necessidade de modificar o código legado. Ele favorece a reutilização e o desacoplamento, permitindo que o cliente trabalhe contra uma interface uniforme (Target) enquanto os Adaptees mantêm suas implementações próprias. Contudo, a introdução de adaptadores adiciona camadas de delegação — mantenha-os simples, bem documentados e com responsabilidade única para evitar complexidade desnecessária.
+
+No projeto, `PixAdapter` e `CartaoAdapter` mostram como encapsular diferentes mecanismos de pagamento por trás da interface `Pagamento`, simplificando o uso pelo cliente.
 
 ##  Referências 
 

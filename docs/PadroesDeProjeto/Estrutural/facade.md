@@ -18,11 +18,11 @@ Esse padrão é especialmente útil quando o sistema possui diversos módulos qu
 
 Um cenário típico seria uma plataforma educacional em que a fachada encapsula a lógica de iniciar um módulo, registrar respostas e atualizar o progresso do aluno em uma única chamada.
 
-## Metodologia
-
 ## Modelagem
 
-<div style="width: 100%; height: 600px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/b1670c4a-bc86-47a6-8fd0-64f53f09ba71" id="gck2YP.hdzHg"></iframe></div>
+<div style="width: 100%; height: 600px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:100%; height:600px" src="https://lucid.app/documents/embedded/b1670c4a-bc86-47a6-8fd0-64f53f09ba71" id="gck2YP.hdzHg"></iframe></div>
+
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/mandicrz"> Amanda Cruz</a>, <a href="https://github.com/tutzs"> Arthur Sousa</a>, <a href="https://github.com/caua08"> Cauã Araujo</a></p>
 
 ## Código
 
@@ -220,10 +220,19 @@ public class NotificacaoService {
 }
 ```
 
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/mandicrz"> Amanda Cruz</a>, <a href="https://github.com/tutzs"> Arthur Sousa</a>, <a href="https://github.com/caua08"> Cauã Araujo</a></p>
+
+
 ### Vídeo
+
+<p align="center"><b>Fonte: </b>Autoria de <a href="https://github.com/tutzs"> Arthur Sousa</a>
+
 
 ## Conclusão
 
+O padrão Facade simplifica a interação com subsistemas complexos ao expor uma API de alto nível, reduzindo o acoplamento e facilitando o uso por clientes. Sua aplicação melhora a legibilidade e a manutenção do código ao centralizar o fluxo composto por várias classes (validação, criação de entidades, notificações, etc.). Evite, entretanto, concentrar responsabilidades demais na fachada — considere delegar lógica de negócio para serviços especializados e mantenha a fachada como orquestradora.
+
+No repositório, `CaronaFCTE_FacadeImpl` demonstra como agregar validação, criação de chat e notificações em uma operação única, tornando o uso do subsistema mais direto para o cliente.
 
 ##  Referências 
 
